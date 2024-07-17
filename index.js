@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("hi");
+  res.send("ExpressDZ API");
 });
 app.use("/api", productRoutes);
 
