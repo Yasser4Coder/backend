@@ -4,7 +4,7 @@ import {
   addproducts,
   getAllFlash,
   addFlash,
-  setDeadline,
+  getDeadline,
 } from "../controllers/productsControllers.js";
 
 const router = express.Router();
@@ -13,6 +13,6 @@ router.get("/products", getAllProducts);
 router.post("/products", addproducts);
 router.get("/flash", getAllFlash);
 router.post("/flash", addFlash);
-router.get("/deadline/:deadline", setDeadline);
+router.get("/deadline/", getDeadline);
 
 export default router;
