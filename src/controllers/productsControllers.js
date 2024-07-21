@@ -58,3 +58,15 @@ export const getDeadline = async (req, res) => {
     res.status(500).json({ message: "Server error", error: err.message });
   }
 };
+
+export const getBySearch = async (req, res) => {
+  const { searchterm } = req.params;
+  try {
+    const data = await Product.find({
+      ProductDesc: { $regex: searchterm, $options: "i" },
+    });
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
