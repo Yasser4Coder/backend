@@ -11,6 +11,8 @@ const flashSchema = mongoose.Schema({
   Currency: String,
   Sales180Day: Number,
   PromotionUrl: String,
+  Date: String,
+  Coupons: [String],
 });
 
 const Flash = mongoose.model("Flash", flashSchema);

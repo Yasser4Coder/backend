@@ -11,6 +11,8 @@ const productSchema = mongoose.Schema({
   Currency: String,
   Sales180Day: Number,
   PromotionUrl: String,
+  Date: String,
+  Coupons: [String],
 });
 
 const Product = mongoose.model("Product", productSchema);
